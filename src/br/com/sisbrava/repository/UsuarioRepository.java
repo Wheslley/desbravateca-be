@@ -95,6 +95,26 @@ public class UsuarioRepository implements ICrud {
 	}
 	
 	@SuppressWarnings("unchecked")
+	public Object getUsuarioUsername(String username) {
+
+		String strQuery = "SELECT u FROM Usuario u WHERE u.usuario like '%" + username + "%'";
+
+		EntityManager em = new JPAUtilMySql().getEntityManager();
+		EntityTransaction tx = em.getTransaction();
+
+		tx.begin();
+
+		Query query = em.createQuery(strQuery);
+
+		List<Object> objetos = query.getResultList();
+
+		tx.commit();
+
+		return objetos.get(0);
+
+	}	
+	
+	@SuppressWarnings("unchecked")
 	public boolean validateUsernamePassword(String usuario, String senha) {
 
 		String strQuery = "SELECT u FROM Usuario u WHERE u.usuario = '" + usuario + "' AND u.senha = '" + senha + "'";

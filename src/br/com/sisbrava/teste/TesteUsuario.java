@@ -1,9 +1,6 @@
 package br.com.sisbrava.teste;
 
-import java.util.List;
-
 import br.com.sisbrava.bean.Usuario;
-import br.com.sisbrava.interfaces.mensagem.ITables;
 import br.com.sisbrava.repository.UsuarioRepository;
 
 public class TesteUsuario {
@@ -33,12 +30,16 @@ public class TesteUsuario {
 		UsuarioRepository.getInstance().insert(usuario);
 		*/
 		
-		List<Object> lo = (List<Object>) UsuarioRepository.getInstance().selectMultiplusObjects(ITables.USUARIO);
-
-		for (Object obj : lo) {
-			Usuario u = (Usuario) obj;
-			System.out.println(u.toString());
-		}
+		Usuario u = (Usuario) UsuarioRepository.getInstance().getUsuarioUsername("whislley");
+		
+		System.out.println(u.getPermissao().toString());
+		
+//		List<Object> lo = (List<Object>) UsuarioRepository.getInstance().selectMultiplusObjects(ITables.USUARIO);
+//
+//		for (Object obj : lo) {
+//			Usuario u = (Usuario) obj;
+//			System.out.println(u.toString());
+//		}
 
 	}
 
