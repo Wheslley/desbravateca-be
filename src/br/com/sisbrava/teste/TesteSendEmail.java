@@ -8,7 +8,7 @@ public class TesteSendEmail {
 		
 		EmailNotification mail = new EmailNotification();
 		
-		mail.envioEmailCadastroLogin("Wheslleyny@gmail.com", "Wheslley");
+		mail.envioEmailCadastroLogin("jady_bd@gmail.com", "Jady");
 		
 	}
 	
