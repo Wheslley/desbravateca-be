@@ -1,6 +1,5 @@
 package br.com.sisbrava.utilidades;
 
-import java.io.IOException;
 import java.util.Properties;
 
 import javax.mail.Message;
