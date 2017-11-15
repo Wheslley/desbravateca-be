@@ -8,7 +8,7 @@ public class TesteTipoEvento {
 	public static void main(String[] args) {
 		
 		TipoEvento tevento = new TipoEvento();
-		tevento.setDescricao("Camporee");
+		tevento.setDescricao("Cronograma");
 		
 		TipoEventoRepository.getInstance().insert(tevento);
 		

@@ -8,17 +8,21 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "tipoEvento")
-public class TipoEvento {
+@Table(name = "notificacao")
+public class Notificacao {
 
 	private Integer id;
 	private String descricao;
-
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "TEVENTO_ID")
+	@Column(name = "notificacao_id")
 	public Integer getId() {
 		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
 	}
 
 	public String getDescricao() {
@@ -29,11 +33,4 @@ public class TipoEvento {
 		this.descricao = descricao;
 	}
 
-	public void setId(Integer id) {
-		this.id = id;
-	}
-	
-	public String toString() {
-		return "Descricao: " + this.descricao;
-	}
 }

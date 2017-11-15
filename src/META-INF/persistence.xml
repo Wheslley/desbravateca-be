@@ -17,6 +17,8 @@ http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
 		<class>br.com.sisbrava.bean.ClubePossuiCep</class>
 		<class>br.com.sisbrava.bean.ClubePossuiPessoa</class>
 		<class>br.com.sisbrava.bean.Especialidades</class>
+		<class>br.com.sisbrava.bean.Evento</class>
+		<class>br.com.sisbrava.bean.Notificacao</class>
 		<class>br.com.sisbrava.bean.Permissoes</class>
 		<class>br.com.sisbrava.bean.Pessoa</class>
 		<class>br.com.sisbrava.bean.PessoaPossuiCep</class>		
