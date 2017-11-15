@@ -22,6 +22,9 @@ http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
 		<class>br.com.sisbrava.bean.ClubePossuiPessoa</class>
 		<class>br.com.sisbrava.bean.PessoaPossuiCep</class>
 		<class>br.com.sisbrava.bean.CargoCepPessoa</class>
+		<class>br.com.sisbrava.bean.ClubePossuiCep</class>
+		<class>br.com.sisbrava.bean.TipoEvento</class>
+		<class>br.com.sisbrava.bean.Requisitos</class>
 		
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
@@ -31,7 +34,7 @@ http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
 
 			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect" />
 			<property name="hibernate.hbm2ddl.auto" value="update" />
-			<property name="hibernate.show_sql" value="false" />
+			<property name="hibernate.show_sql" value="true" />
 			<property name="hibernate.format_sql" value="true" />
 		</properties>
 	</persistence-unit>

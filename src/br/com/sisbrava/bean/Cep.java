@@ -15,7 +15,8 @@ public class Cep {
 	private String cidade;
 	private String estado;
 	private String pais;
-	
+	private Integer regiao;
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "CEP_ID")
@@ -51,7 +52,15 @@ public class Cep {
 		this.pais = pais;
 	}
 
+	public Integer getRegiao() {
+		return regiao;
+	}
+
+	public void setRegiao(Integer regiao) {
+		this.regiao = regiao;
+	}
+
 	public String toString() {
-		return "Cidade: " + this.cidade + " / Estado: " + this.estado + " / País: " + this.pais;
+		return this.regiao + "ª REGIÃO / Cidade: " + this.cidade + " / Estado: " + this.estado + " / País: " + this.pais;
 	}
 }

@@ -1,5 +1,6 @@
 package br.com.sisbrava.repository;
 
+import java.util.Date;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -24,12 +25,16 @@ public class UsuarioRepository implements ICrud {
 	public void insert(Object object) {
 
 		Usuario usuario = (Usuario) object;
+		
+		Date date = new Date();
+		usuario.setSenha(""+date.getTime());
+		
 		EntityManager em = new JPAUtilMySql().getEntityManager();
 		em.getTransaction().begin();
 		em.persist(usuario);
 		em.getTransaction().commit();
 		em.close();
-
+		
 	}
 
 	@Override

@@ -15,5 +15,7 @@ public interface ITables {
 	public static String PESSOA_POSSUI_CEP = "PessoaPossuiCep";
 	public static String CARGO = "Cargo";
 	public static String CARGO_CEP_PESSOA = "CargoCepPessoa";
+	public static String REQUISITOS = "Requisitos";
+	public static String CLUBE_POSSUI_CEP = "ClubePossuiCep";
 
 }
