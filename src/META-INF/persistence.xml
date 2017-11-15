@@ -9,22 +9,22 @@ http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
 		
 		<!-- Mapeamento ORM - Tabelas DB com Classes BE -->
 		
-		<class>br.com.sisbrava.bean.Usuario</class>
-		<class>br.com.sisbrava.bean.Pessoa</class>
-		<class>br.com.sisbrava.bean.Permissoes</class>
-		<class>br.com.sisbrava.bean.Classes</class>
-		<class>br.com.sisbrava.bean.Especialidades</class>
-		<class>br.com.sisbrava.bean.Cep</class>
 		<class>br.com.sisbrava.bean.Cargo</class>
+		<class>br.com.sisbrava.bean.CargoCepPessoa</class>
+		<class>br.com.sisbrava.bean.Cep</class>
+		<class>br.com.sisbrava.bean.Classes</class>
 		<class>br.com.sisbrava.bean.Clube</class>
+		<class>br.com.sisbrava.bean.ClubePossuiCep</class>
+		<class>br.com.sisbrava.bean.ClubePossuiPessoa</class>
+		<class>br.com.sisbrava.bean.Especialidades</class>
+		<class>br.com.sisbrava.bean.Permissoes</class>
+		<class>br.com.sisbrava.bean.Pessoa</class>
+		<class>br.com.sisbrava.bean.PessoaPossuiCep</class>		
 		<class>br.com.sisbrava.bean.PessoaPossuiClasse</class>
 		<class>br.com.sisbrava.bean.PessoaPossuiEspecialidade</class>
-		<class>br.com.sisbrava.bean.ClubePossuiPessoa</class>
-		<class>br.com.sisbrava.bean.PessoaPossuiCep</class>
-		<class>br.com.sisbrava.bean.CargoCepPessoa</class>
-		<class>br.com.sisbrava.bean.ClubePossuiCep</class>
-		<class>br.com.sisbrava.bean.TipoEvento</class>
 		<class>br.com.sisbrava.bean.Requisitos</class>
+		<class>br.com.sisbrava.bean.TipoEvento</class>
+		<class>br.com.sisbrava.bean.Usuario</class>
 		
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
