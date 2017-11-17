@@ -17,7 +17,7 @@ public class TestePermissao {
 			System.out.println(p3.toString());
 		}
 		
-		/*Permissoes p = new Permissoes();
+		Permissoes p = new Permissoes();
 		p.setDescricao("Tecnico");
 
 		Permissoes p2 = new Permissoes();
@@ -40,7 +40,7 @@ public class TestePermissao {
 		for (Object obj : lo) {
 			Permissoes p3 = (Permissoes) obj;
 			System.out.println(p3.toString());
-		}*/
+		}
 
 	}
 

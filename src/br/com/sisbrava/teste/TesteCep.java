@@ -10,11 +10,12 @@ public class TesteCep {
 	
 	public static void main(String[] args) {
 		
-		/*
+		
 		Cep cep = new Cep();
 		cep.setCidade("ARARAQUARA");
 		cep.setEstado("SÃO PAULO");
 		cep.setPais("BRASIL");
+		cep.setRegiao(3);
 		
 		CepRepository.getInstance().insert(cep);
 		
@@ -22,6 +23,7 @@ public class TesteCep {
 		cep.setCidade("MATÃO");
 		cep.setEstado("SÃO PAULO");
 		cep.setPais("BRASIL");
+		cep.setRegiao(3);
 		
 		CepRepository.getInstance().insert(cep);
 		
@@ -29,9 +31,10 @@ public class TesteCep {
 		cep.setCidade("SÃO CARLOS");
 		cep.setEstado("SÃO PAULO");
 		cep.setPais("BRASIL");
+		cep.setRegiao(3);
 		
 		CepRepository.getInstance().insert(cep);
-		*/
+		
 		
 		List<Object> lo = (List<Object>) CepRepository.getInstance().selectMultiplusObjects(ITables.CEP);
 

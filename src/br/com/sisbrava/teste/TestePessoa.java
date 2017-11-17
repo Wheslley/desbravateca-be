@@ -19,7 +19,7 @@ public class TestePessoa {
 		p1.setRg("");
 		p1.setCpf("35017458859");
 		
-		//PessoaRepository.getInstance().insert(p1);
+		PessoaRepository.getInstance().insert(p1);
 		
 		List<Object> lo = (List<Object>) PessoaRepository.getInstance().selectMultiplusObjects(ITables.PESSOA);
 		
