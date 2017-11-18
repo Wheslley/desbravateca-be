@@ -6,8 +6,11 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
+
+import org.hibernate.annotations.Cascade;
+import org.hibernate.annotations.CascadeType;
 
 @Entity
 @Table(name = "USUARIO")
@@ -46,7 +49,8 @@ public class Usuario {
 		this.senha = senha;
 	}
 	
-	@ManyToOne
+	@OneToOne
+	@Cascade(CascadeType.DELETE)
 	@JoinColumn(name = "PESSOA_ID")
 	public Pessoa getPessoa() {
 		return pessoa;
@@ -56,7 +60,7 @@ public class Usuario {
 		this.pessoa = pessoa;
 	}
 	
-	@ManyToOne
+	@OneToOne
 	@JoinColumn(name = "PERMISSOES_ID")
 	public Permissoes getPermissao() {
 		return permissao;

@@ -143,7 +143,7 @@ public class UsuarioRepository implements ICrud {
 	@SuppressWarnings("unchecked")
 	public List<Object> selectOneObjectPermissao(Integer permissao) {
 
-		String strQuery = "SELECT u FROM Usuario u WHERE u.id_permissao = " + permissao;
+		String strQuery = "SELECT u FROM Usuario u WHERE u.permissoes_id = " + permissao;
 		
 		EntityManager em = new JPAUtilMySql().getEntityManager();
 		EntityTransaction tx = em.getTransaction();

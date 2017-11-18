@@ -61,6 +61,6 @@ public class Cep {
 	}
 
 	public String toString() {
-		return this.regiao + "ª REGIÃO / Cidade: " + this.cidade + " / Estado: " + this.estado + " / País: " + this.pais;
+		return this.cidade.toUpperCase() + " - " + this.regiao + "ª REGIÃO";
 	}
 }

@@ -13,19 +13,21 @@ public class TestePessoa {
 		
 		//System.out.println(p.getNome());
 		
-		Pessoa p1 = new Pessoa();
-		p1.setIdade(23);
-		p1.setNome("Jady Bezerra Domingues");
-		p1.setRg("");
-		p1.setCpf("35017458859");
-		
-		PessoaRepository.getInstance().insert(p1);
+//		Pessoa p1 = new Pessoa();
+//		p1.setIdade(23);
+//		p1.setNome("Jady Bezerra Domingues");
+//		p1.setRg("");
+//		p1.setCpf("35017458859");
+//		
+//		PessoaRepository.getInstance().insert(p1);
 		
 		List<Object> lo = (List<Object>) PessoaRepository.getInstance().selectMultiplusObjects(ITables.PESSOA);
 		
 		for (Object obj : lo) {
 			Pessoa p3 = (Pessoa) obj;
-			System.out.println(p3.toString());
+			System.out.println(p3.getId() + " >> " + p3.toString());
+			
+			if(p3.getId() == 4) PessoaRepository.getInstance().delete(p3);
 		}
 		
 		
