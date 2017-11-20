@@ -16,53 +16,12 @@ public class TestePessoaPossuiClasse {
 
 		Pessoa pessoa = (Pessoa) PessoaRepository.getInstance().getSelectOneObject(1);
 		
-		Classes classe = (Classes) ClassesRepository.getInstance().getSelectOneObject(1);
+		Classes classe = (Classes) ClassesRepository.getInstance().getSelectOneObject(2);
 		PessoaPossuiClasse ppClasse = new PessoaPossuiClasse();
 		ppClasse.setPessoa(pessoa);
 		ppClasse.setClasse(classe);
+		ppClasse.setStatus(2);
 		
-		PessoaPossuiClasseRepository.getInstance().insert(ppClasse);
-		
-		classe = (Classes) ClassesRepository.getInstance().getSelectOneObject(3);
-		ppClasse = new PessoaPossuiClasse();
-		ppClasse.setPessoa(pessoa);
-		ppClasse.setClasse(classe);
-
-		PessoaPossuiClasseRepository.getInstance().insert(ppClasse);
-
-		classe = (Classes) ClassesRepository.getInstance().getSelectOneObject(5);
-		ppClasse = new PessoaPossuiClasse();
-		ppClasse.setPessoa(pessoa);
-		ppClasse.setClasse(classe);
-
-		PessoaPossuiClasseRepository.getInstance().insert(ppClasse);
-
-		classe = (Classes) ClassesRepository.getInstance().getSelectOneObject(7);
-		ppClasse = new PessoaPossuiClasse();
-		ppClasse.setPessoa(pessoa);
-		ppClasse.setClasse(classe);
-
-		PessoaPossuiClasseRepository.getInstance().insert(ppClasse);
-
-		classe = (Classes) ClassesRepository.getInstance().getSelectOneObject(9);
-		ppClasse = new PessoaPossuiClasse();
-		ppClasse.setPessoa(pessoa);
-		ppClasse.setClasse(classe);
-
-		PessoaPossuiClasseRepository.getInstance().insert(ppClasse);
-
-		classe = (Classes) ClassesRepository.getInstance().getSelectOneObject(11);
-		ppClasse = new PessoaPossuiClasse();
-		ppClasse.setPessoa(pessoa);
-		ppClasse.setClasse(classe);
-
-		PessoaPossuiClasseRepository.getInstance().insert(ppClasse);
-
-		classe = (Classes) ClassesRepository.getInstance().getSelectOneObject(13);
-		ppClasse = new PessoaPossuiClasse();
-		ppClasse.setPessoa(pessoa);
-		ppClasse.setClasse(classe);
-
 		PessoaPossuiClasseRepository.getInstance().insert(ppClasse);
 
 		List<Object> lista = (List<Object>) PessoaPossuiClasseRepository.getInstance()

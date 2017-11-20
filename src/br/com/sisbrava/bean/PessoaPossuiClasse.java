@@ -16,7 +16,8 @@ public class PessoaPossuiClasse {
 	private Integer id;
 	private Pessoa pessoa;
 	private Classes classes;
-	
+	private Integer status;
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "ppclasse_id")
@@ -27,7 +28,7 @@ public class PessoaPossuiClasse {
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	
+
 	@ManyToOne
 	@JoinColumn(name = "pessoa_id")
 	public Pessoa getPessoa() {
@@ -37,7 +38,7 @@ public class PessoaPossuiClasse {
 	public void setPessoa(Pessoa pessoa) {
 		this.pessoa = pessoa;
 	}
-	
+
 	@ManyToOne
 	@JoinColumn(name = "classe_id")
 	public Classes getClasse() {
@@ -47,9 +48,17 @@ public class PessoaPossuiClasse {
 	public void setClasse(Classes classes) {
 		this.classes = classes;
 	}
-	
-	public String toString() {
-		return "Pessoa: " + this.pessoa.getNome() + " - Classe: " + this.classes.getDescricao();
+
+	public Integer getStatus() {
+		return status;
+	}
+
+	public void setStatus(Integer status) {
+		this.status = status;
 	}
 	
+	public String toString() {
+		return "Pessoa: " + this.pessoa.getNome() + " - Classe: " + this.classes.getDescricao() + " - STATUS: " + this.status;
+	}
+
 }

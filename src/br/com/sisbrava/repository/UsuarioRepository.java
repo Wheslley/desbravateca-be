@@ -123,7 +123,7 @@ public class UsuarioRepository implements ICrud {
 	public boolean validateUsernamePassword(String usuario, String senha) {
 
 		String strQuery = "SELECT u FROM Usuario u WHERE u.usuario = '" + usuario + "' AND u.senha = '" + senha + "'";
-
+		
 		EntityManager em = new JPAUtilMySql().getEntityManager();
 		EntityTransaction tx = em.getTransaction();
 
