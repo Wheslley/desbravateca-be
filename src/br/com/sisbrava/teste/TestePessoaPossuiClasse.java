@@ -24,6 +24,7 @@ public class TestePessoaPossuiClasse {
 		 * PessoaPossuiClasseRepository.getInstance().insert(ppClasse);
 		 */
 
+		@SuppressWarnings("unused")
 		Usuario usuario = (Usuario) UsuarioRepository.getInstance().getSelectOneObject(1);
 
 		List<Object> lista = (List<Object>) PessoaPossuiClasseRepository.getInstance()
@@ -31,7 +32,7 @@ public class TestePessoaPossuiClasse {
 
 		for (Object obj : lista) {
 			PessoaPossuiClasse ppClass = (PessoaPossuiClasse) obj;
-			if (ppClass.getStatus() == 2) {
+			if (ppClass.getStatus() == 1) {
 				System.out.println(ppClass.toString());
 			}
 		}

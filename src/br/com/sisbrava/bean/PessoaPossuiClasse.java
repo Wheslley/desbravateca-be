@@ -17,6 +17,7 @@ public class PessoaPossuiClasse {
 	private Pessoa pessoa;
 	private Classes classes;
 	private Integer status;
+	private Double nota;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -56,9 +57,18 @@ public class PessoaPossuiClasse {
 	public void setStatus(Integer status) {
 		this.status = status;
 	}
-	
+
+	public Double getNota() {
+		return nota;
+	}
+
+	public void setNota(Double nota) {
+		this.nota = nota;
+	}
+
 	public String toString() {
-		return "Pessoa: " + this.pessoa.getNome() + " - Classe: " + this.classes.getDescricao() + " - STATUS: " + this.status;
+		return "Pessoa: " + this.pessoa.getNome() + " - Classe: " + this.classes.getDescricao() + " - NOTA(" + this.nota
+				+ ") - STATUS: " + this.status;
 	}
 
 }
