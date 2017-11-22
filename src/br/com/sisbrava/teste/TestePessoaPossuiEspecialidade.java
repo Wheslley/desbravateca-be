@@ -21,6 +21,40 @@ public class TestePessoaPossuiEspecialidade {
 		ppEspecialidade.setEspecialidade(especialidade);
 		ppEspecialidade.setPessoa(pessoa);
 		ppEspecialidade.setStatus(2);
+		ppEspecialidade.setNota(8.5);
+		
+		PessoaPossuiEspecialidadeRepository.getInstance().insert(ppEspecialidade);
+		
+		pessoa = (Pessoa) PessoaRepository.getInstance().getSelectOneObject(1);
+		especialidade = (Especialidades) EspecialidadesRepository.getInstance().getSelectOneObject(3);
+		
+		ppEspecialidade = new PessoaPossuiEspecialidade();
+		ppEspecialidade.setEspecialidade(especialidade);
+		ppEspecialidade.setPessoa(pessoa);
+		ppEspecialidade.setStatus(2);
+		ppEspecialidade.setNota(8.5);
+		
+		PessoaPossuiEspecialidadeRepository.getInstance().insert(ppEspecialidade);
+		
+		pessoa = (Pessoa) PessoaRepository.getInstance().getSelectOneObject(1);
+		especialidade = (Especialidades) EspecialidadesRepository.getInstance().getSelectOneObject(4);
+		
+		ppEspecialidade = new PessoaPossuiEspecialidade();
+		ppEspecialidade.setEspecialidade(especialidade);
+		ppEspecialidade.setPessoa(pessoa);
+		ppEspecialidade.setStatus(2);
+		ppEspecialidade.setNota(8.5);
+		
+		PessoaPossuiEspecialidadeRepository.getInstance().insert(ppEspecialidade);
+		
+		pessoa = (Pessoa) PessoaRepository.getInstance().getSelectOneObject(1);
+		especialidade = (Especialidades) EspecialidadesRepository.getInstance().getSelectOneObject(5);
+		
+		ppEspecialidade = new PessoaPossuiEspecialidade();
+		ppEspecialidade.setEspecialidade(especialidade);
+		ppEspecialidade.setPessoa(pessoa);
+		ppEspecialidade.setStatus(2);
+		ppEspecialidade.setNota(8.5);
 		
 		PessoaPossuiEspecialidadeRepository.getInstance().insert(ppEspecialidade);
 		

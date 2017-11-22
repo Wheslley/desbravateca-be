@@ -17,6 +17,7 @@ public class PessoaPossuiEspecialidade {
 	private Pessoa pessoa;
 	private Especialidades especialidade;
 	private Integer status;
+	private Double nota;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -57,8 +58,17 @@ public class PessoaPossuiEspecialidade {
 		this.status = status;
 	}
 
+	public Double getNota() {
+		return nota;
+	}
+
+	public void setNota(Double nota) {
+		this.nota = nota;
+	}
+
 	public String toString() {
-		return "Pessoa: " + this.pessoa.getNome() + " Especialidade: " + this.especialidade.getDescricao() + " - Status: " + this.status;
+		return "Pessoa: " + this.pessoa.getNome() + " Especialidade: " + this.especialidade.getDescricao()
+				+ " Nota[" + this.nota + "]- Status: " + this.status;
 	}
 
 }
